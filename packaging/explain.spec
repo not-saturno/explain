@@ -5,7 +5,8 @@ Summary:        Fast command-line utility for terminal workflow automation and A
 
 License:        LicenseRef-Proprietary
 URL:            https://github.com/not-saturno/explain
-Source0:        %{name}-%{version}.tar.gz
+VCS:            {{{ git_repo_vcs }}}
+Source0:        {{{ git_repo_pack }}}
 
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
@@ -18,7 +19,7 @@ Fast command-line utility designed for terminal workflow automation
 and API querying.
 
 %prep
-%autosetup
+{{{ git_repo_setup_macro }}}
 
 %build
 %cmake
@@ -31,6 +32,7 @@ and API querying.
 %{_bindir}/explain
 
 %changelog
-* Sat Oct 03 2026 Jean Remedios <not-saturno@users.noreply.github.com> - 1.0.0-1
+
+* Sat Oct 03 2026 Jean Remedios [not-saturno@users.noreply.github.com](mailto:not-saturno@users.noreply.github.com) - 1.0.0-1
+
 - Initial package
-```
