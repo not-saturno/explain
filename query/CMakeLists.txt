@@ -1,4 +1,4 @@
-add_library(query)
+add_library(query STATIC)
 
 target_sources(query
     PRIVATE

@@ -1,4 +1,4 @@
-add_library(flags)
+add_library(flags STATIC)
 
 target_sources(flags
     PRIVATE
