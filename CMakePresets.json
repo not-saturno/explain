@@ -1,0 +1,17 @@
+{
+  "version": 4,
+  "configurePresets": [
+    {
+      "name": "vcpkg-base",
+      "hidden": true,
+      "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+    },
+    {
+      "name": "default",
+      "displayName": "Default Config",
+      "inherits": "vcpkg-base",
+      "binaryDir": "${sourceDir}/build",
+      "generator": "Ninja"
+    }
+  ]
+}
