@@ -10,8 +10,6 @@ Release:        1%{?dist}
 License:        unknown
 Vendor:         Saturno
 
-Source0:        %{name}-%{version}.tar.gz
-
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
 BuildRequires:  make
@@ -22,7 +20,7 @@ BuildRequires:  make
 Fast command-line utility designed for terminal workflow automation and API querying.
 
 %prep
-%autosetup
+# Intentional empty prep block: source is checked out directly into the build root by SCM
 
 %build
 %cmake
