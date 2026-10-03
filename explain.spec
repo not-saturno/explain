@@ -20,10 +20,9 @@ BuildRequires:  make
 Fast command-line utility designed for terminal workflow automation and API querying.
 
 %prep
-# Intentional empty prep block: source is checked out directly into the build root by SCM
 
 %build
-%cmake
+%cmake -S ..
 %cmake_build
 
 %install
