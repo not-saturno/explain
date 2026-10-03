@@ -14,7 +14,6 @@ BuildRequires:  gcc-c++
 Terminal utility for API explanations and querying.
 
 %prep
-%autosetup -T
 tar -xzf %{SOURCE0}
 
 %build
