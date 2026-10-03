@@ -10,9 +10,13 @@ Release:        1%{?dist}
 License:        unknown
 Vendor:         Saturno
 
+Source0:        %{name}-%{version}.tar.gz
+
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
 BuildRequires:  make
+BuildRequires:  nlohmann_json-devel
+BuildRequires:  libcpr-devel
 
 %define _unpackaged_files_terminate_build 0
 
@@ -20,9 +24,10 @@ BuildRequires:  make
 Fast command-line utility designed for terminal workflow automation and API querying.
 
 %prep
+%autosetup
 
 %build
-%cmake -S ..
+%cmake
 %cmake_build
 
 %install
