@@ -11,7 +11,6 @@ License:        unknown
 Group:          unknown
 Vendor:         Saturno
 
-Prefix:         /usr/local
 %define _unpackaged_files_terminate_build 0
 
 %description
@@ -22,9 +21,9 @@ Fast command-line utility designed for terminal workflow automation and API quer
 %build
 
 %install
-mkdir -p %{buildroot}/usr/local/bin
+mkdir -p %{buildroot}%{_bindir}
 if [ -f explain ]; then
-    cp explain %{buildroot}/usr/local/bin/
+    cp explain %{buildroot}%{_bindir}/
 fi
 
 %clean
@@ -32,7 +31,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-/usr/local/bin/explain
+%{_bindir}/explain
 
 %changelog
 * Sun Jul 04 2010 Eric Noulard <eric.noulard@gmail.com> - 1.0.0-1%{?dist}
