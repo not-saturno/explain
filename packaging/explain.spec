@@ -12,6 +12,7 @@ BuildRequires:  cmake
 BuildRequires:  gcc-c++
 BuildRequires:  make
 BuildRequires:  cpr-devel
+BuildRequires: libcurl-devel
 BuildRequires:  json-devel
 
 %description
