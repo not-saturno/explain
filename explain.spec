@@ -5,6 +5,8 @@ Summary:        Terminal tool with API integration
 License:        MIT
 URL:            https://github.com/not-saturno/explain
 
+Source0:        {{{ git_dir_pack }}}
+
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
 
@@ -12,7 +14,7 @@ BuildRequires:  gcc-c++
 Terminal utility for API explanations and querying.
 
 %prep
-# COPR clones the git repository automatically
+%autosetup
 
 %build
 %cmake
@@ -23,3 +25,7 @@ Terminal utility for API explanations and querying.
 
 %files
 %{_bindir}/explain
+
+%changelog
+* Sat Oct 03 2026 Jean Remédios not.saturno@proton.me - 1.0.0-1
+- Initial package
