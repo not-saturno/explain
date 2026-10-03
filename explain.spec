@@ -8,8 +8,13 @@ Name:           explain
 Version:        1.0.0
 Release:        1%{?dist}
 License:        unknown
-Group:          unknown
 Vendor:         Saturno
+
+Source0:        %{name}-%{version}.tar.gz
+
+BuildRequires:  cmake
+BuildRequires:  gcc-c++
+BuildRequires:  make
 
 %define _unpackaged_files_terminate_build 0
 
@@ -17,20 +22,16 @@ Vendor:         Saturno
 Fast command-line utility designed for terminal workflow automation and API querying.
 
 %prep
+%autosetup
 
 %build
+%cmake
+%cmake_build
 
 %install
-mkdir -p %{buildroot}%{_bindir}
-if [ -f explain ]; then
-    cp explain %{buildroot}%{_bindir}/
-fi
-
-%clean
-rm -rf %{buildroot}
+%cmake_install
 
 %files
-%defattr(-,root,root,-)
 %{_bindir}/explain
 
 %changelog
